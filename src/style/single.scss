@@ -1,0 +1,104 @@
+@function px2rem($px){
+  @return $px/100px *1rem;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('./font/iconfont.eot');
+  src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('./font/iconfont.woff') format('woff'),
+  url('./font/iconfont.ttf') format('truetype'),
+  url('./font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+*{
+	margin:0;
+	padding:0;
+}
+header{
+	display:flex;
+	width:100%;
+	flex-direction:column;
+}
+header .top{
+	display:flex;
+	width:100%;
+	height:px2rem(36px);
+	background:#F64744;
+	justify-content:space-between;
+}
+header p{
+	background:url(../img/logo.png) no-repeat px2rem(30px) px2rem(10px);
+	width:px2rem(178px);
+	height:px2rem(36px);
+	background-size: px2rem(80px) auto;
+}
+header .top .left{
+	margin-left:px2rem(10px);
+	line-height:px2rem(36px);
+}
+header .top .left a{
+	text-decoration:none;
+	color:#fff;
+	font-size:px2rem(12px)
+}
+header .top .left i{
+	color:#fff;
+	font-size:px2rem(10px);
+	margin-left:px2rem(3px);
+}
+header .top .right{
+	margin-right:px2rem(10px);
+	line-height:px2rem(36px);
+}
+header .top .right a{
+	float:left;
+	text-decoration:none;
+	color:#fff;
+	font-size:px2rem(12px);
+}
+
+header .top .right i{
+	background:url(../img/user_icon.png) no-repeat px2rem(7px) px2rem(10px);
+	width:px2rem(20px);
+	height:px2rem(36px);
+	float:left;
+	background-size: px2rem(12px) auto;	
+}
+header .bottom{
+	width:100%;
+	height:px2rem(44px);
+	text-align:center;
+	position:relative;
+}
+header .bottom input{
+	margin-top:px2rem(6px);
+	width:90%;
+	display:inline-block;
+	height:px2rem(25px);
+	text-indent:px2rem(40px);
+	border:none;
+	border:1px solid #ccc;
+}
+header .bottom i{
+	width:px2rem(20px);
+	height:px2rem(20px);
+	display:block;
+	position:absolute;
+	left:px2rem(20px);
+	top:px2rem(10px);
+	background:url(../img/search.png) no-repeat;
+	background-size: px2rem(20px) auto;	
+}
+
+
+
+
+
+
