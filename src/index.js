@@ -4,10 +4,12 @@ import App from './router/index';
 import registerServiceWorker from './registerServiceWorker';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
-import SingleReducer from './reducers/SingleReducer';
-
+import FoodReducer from './reducers/FoodReducer';
+import NextReducer from './reducers/NextReducer';
 const recuders = combineReducers({
-	list: SingleReducer
+	list: FoodReducer,
+	list1:NextReducer
+})
 const store = createStore(recuders, {});
 
 
@@ -16,7 +18,3 @@ function renderPage() {
 }
 
 renderPage();
-
-store.subscribe(renderPage);
-
-registerServiceWorker();

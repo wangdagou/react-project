@@ -1,0 +1,203 @@
+@function px2rem($px){
+  @return $px/100px *1rem;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('./iconfont/iconfont.eot');
+  src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('./iconfont/iconfont.woff') format('woff'),
+  url('./iconfont/iconfont.ttf') format('truetype'),
+  url('./iconfont/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: 'iconfont';
+  src: url('./font/iconfont.eot');
+  src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'),
+  url('./font/iconfont.woff') format('woff'),
+  url('./font/iconfont.ttf') format('truetype'),
+  url('./font/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+  font-family:"iconfont" !important;
+  font-size:16px;font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*{
+  margin:0;
+  padding:0;
+}
+
+.header{
+  width:100%;
+  height:px2rem(44px);
+  background:#f64744;
+  display:flex;
+  align-items:center;
+}
+
+.header i{
+  font-size:px2rem(25px);
+  color:#fff;
+  font-weight:normal
+}
+.header input{
+  border:none;
+  width:px2rem(305px);
+  height:px2rem(30px);
+  margin-left:px2rem(30px);
+  text-indent:px2rem(30px);
+  position:relative
+}
+.header span{
+  width:px2rem(20px);
+  height:px2rem(20px);
+  background:url(../img/search.png) no-repeat;
+  background-size:cover;
+  position:absolute;
+  left:px2rem(60px);
+  top:px2rem(12px);
+  z-index:2;
+}
+
+.header span img{
+  width:100%;
+  height:100%;
+}
+
+.nav{
+  width:100%;
+  height:px2rem(38px);
+  border-bottom:px2rem(1px) solid #e4e4e4;
+}
+
+.nav .navson{
+  display:flex;
+  flex-direction:columen;
+  list-style:none;
+}
+.nav .navson li{
+  width:px2rem(134px);
+  height:px2rem(38px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#717171
+}
+.nav .navson li a{
+  margin-left:px2rem(30px);
+  color:#dedede;
+}
+.nav .navson li i{
+  margin-left:px2rem(5px);
+}
+
+.foods{
+  width:px2rem(300px);
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+}
+.foods li{
+  width:px2rem(305px);
+  height:px2rem(102px);
+  border-bottom:1px solid #e4e4e4;
+  padding:10px;
+  display:flex;
+}
+.foods .image{
+  display:block;
+  width:px2rem(118px);
+  height:px2rem(79px);
+  float:left;
+}
+.foods .image img{
+  width:100%;
+  height:100%;
+}
+
+.foods li{
+  width:px2rem(350px);
+  height:px2rem(100px);
+}
+.foods  .p{
+  width:px2rem(250px);
+  height:px2rem(102px);
+  float:left;
+  margin-left:10px;
+  display:flex;
+  flex-direction:column;
+}
+.foods .p1{
+  display:inline-block;
+  float:left;
+  text-align:center;
+}
+
+.foods .zhe{
+  display:block;
+  width:px2rem(250px);
+  height:px2rem(21px);
+  foat:left;
+  font-size:px2rem(14px);
+  margin-top:5px;
+  color:#636363;
+}
+.foods .or-price{
+  width:px2rem(250px);
+  height:px(30px);
+}
+.foods .price{
+  display:inline-block;
+  width:px2rem(20px);
+  color:red;
+  margin-top:px2rem(20px);
+  float:left;
+  font-size:px2rem(18px);
+  font-weight:bold;
+}
+.foods .price1{
+  display:inline-block;
+  width:px2rem(20px);
+  margin-top:px2rem(20px);
+  float:left;
+  text-decoration:line-through;
+  margin-left:px2rem(35px);
+  font-size:px2rem(12px);
+  margin-top:px2rem(25px);
+  color:#636363;
+}
+
+.last{
+  width:100%;
+  height:px2rem(50px);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+.last a{
+  display:block;
+  width:px2rem(66px);
+  height:px2rem(30px);
+  text-align:center;
+  float:left;
+  text-decoration:none;
+  border:1px solid #e4e4e4;
+  border-radius:px2rem(5px);
+  margin-left:px2rem(10px);
+  line-height:px2rem(30px);
+}
+.last a:first-child{
+  color:#ccccd5;
+}
