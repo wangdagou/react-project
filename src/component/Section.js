@@ -5,13 +5,13 @@ import scss from '../style/food.scss';
 import {
   Link
 } from 'react-router-dom'
-class NextUI extends Component {
+class SectionUI extends Component {
 	componentDidMount() {
 		this.props.getData();
 	}
 	render() {
 		return (
-		<div id="next">
+		<div id="section">
 		<div className="header">
 				<i className="iconfont">&#xe676;</i>
 				<span></span>
@@ -26,11 +26,10 @@ class NextUI extends Component {
 				</ul>
 				</div>
 				<ul className="foods">
-					{this.props.list1.map((item,index)=>{
-						
+					{this.props.list2.data.map((item,index)=>{
 						return <li key={item.id}>
 									<span className="image"> 
-										<img src={item.image_240}/>
+										<img src={item.image_1280}/>
 									</span>
 									<div className="p">
 										<p className="p2">{item.store_name}{item.msg_name}</p>
@@ -46,8 +45,8 @@ class NextUI extends Component {
 					})}
 				</ul>
 				<p className="last">
-					<Link to="/">上一页</Link>
-					<Link to="/2">下一页</Link>
+					<Link to="/1">上一页</Link>
+					<Link to="/">下一页</Link>
 				</p>
 			
 				<div className="footer">
@@ -88,19 +87,19 @@ class NextUI extends Component {
 
 const mapStateToProps = (state)=>{
 	return {
-		list1: state.list1
+		list2: state.list2
 	}
 }
 
 const mapDispatchToProps = (dispatch)=>{
 	return {
 		getData: function(){
-			axios.get("/list.html?cate=meishi&curpage=2&ajax=1")
+			axios.get("/list.html?cate=meishi&curpage=3&ajax=1")
 			.then((res)=>{
 				console.log(res)
 				dispatch({
-					type: "NEXT_GET_DATA",
-					payload: res.data.data
+					type: "SECTION_GET_DATA",
+					payload: res.data
 				})
 				console.log(res);
 			})
@@ -108,6 +107,6 @@ const mapDispatchToProps = (dispatch)=>{
 	}
 }
 
-const Next = connect(mapStateToProps, mapDispatchToProps)(NextUI);
+const Section = connect(mapStateToProps, mapDispatchToProps)(SectionUI);
 
-export default Next;
+export default Section;

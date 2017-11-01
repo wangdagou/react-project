@@ -6,9 +6,13 @@ import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import FoodReducer from './reducers/FoodReducer';
 import NextReducer from './reducers/NextReducer';
+import SectionReducer from './reducers/SectionReducer';
+
 const recuders = combineReducers({
 	list: FoodReducer,
-	list1:NextReducer
+	list1:NextReducer,
+	list2:SectionReducer
+
 })
 const store = createStore(recuders, {});
 
