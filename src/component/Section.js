@@ -46,7 +46,7 @@ class SectionUI extends Component {
 				</ul>
 				<p className="last">
 					<Link to="/1">上一页</Link>
-					<Link to="/">下一页</Link>
+					<Link to="/register">下一页</Link>
 				</p>
 			
 				<div className="footer">

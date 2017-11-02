@@ -12,8 +12,8 @@ const recuders = combineReducers({
 	list: FoodReducer,
 	list1:NextReducer,
 	list2:SectionReducer
-
 })
+
 const store = createStore(recuders, {});
 
 
@@ -22,3 +22,7 @@ function renderPage() {
 }
 
 renderPage();
+
+store.subscribe(renderPage);
+
+registerServiceWorker();
