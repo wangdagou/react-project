@@ -26,7 +26,7 @@ class NextUI extends Component {
 				</ul>
 				</div>
 				<ul className="foods">
-					{this.props.list1.map((item,index)=>{
+					{this.props.list3.map((item,index)=>{
 						
 						return <li key={item.id}>
 									<span className="image"> 
@@ -88,7 +88,7 @@ class NextUI extends Component {
 
 const mapStateToProps = (state)=>{
 	return {
-		list1: state.list1
+		list3: state.list3
 	}
 }
 
