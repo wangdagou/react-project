@@ -50,6 +50,37 @@ class FoodUI extends Component {
 					<Link to="/1">下一页</Link>
 				</p>
 			
+				<div className="footer">
+					<div className="footer_top">
+						<button className="bnt">查看全部优惠</button>
+						<a href="#">返回顶部</a>
+					</div>
+					<div className="footer_center">
+							<button>登录</button>
+							<button>注册</button>
+							<div className="footer_right">
+							<p>
+								城市:
+							</p>
+							<span>
+								桐乡
+								<i className="iconfont">&#xe8ca;</i>
+							</span>
+							</div>
+					</div>
+					<div className="footer_bottom">
+						<ul>
+							<li><a href="">首页</a></li>
+							<li><a href="">电脑版</a></li>
+							<li><a href="">客户端</a></li>
+							<li><a href="">关于我们</a></li>
+							<li><a href="">信息反馈</a></li>
+							<li className="border"><a href="#">帮助</a></li>
+						</ul>
+					</div>
+				</div>
+				<div className="photo">
+				</div>
 
 		</div>
 		)

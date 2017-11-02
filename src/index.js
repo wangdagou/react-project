@@ -10,6 +10,8 @@ const recuders = combineReducers({
 	list: SingleReducer,
 	list1: SingleReducer,
 	ss:DetailsReducer,
+	list: FoodReducer,
+	list2:SectionReducer
 })
 
 const store = createStore(recuders, {});
