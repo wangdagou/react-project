@@ -61,15 +61,6 @@
         "^/index": "/index"
       },
       "ws": true
-    },
-    "/list": {
-      "target": "http://m.1c10.cn",
-      "changeOrigin": true,
-      "pathRewrite": {
-        "^/list": "/list"
-      },
-      "ws": true
-
     }
   },
   "jest": {
