@@ -5,11 +5,13 @@ import registerServiceWorker from './registerServiceWorker';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
 import SingleReducer from './reducers/SingleReducer';
-
+import DetailsReducer from './reducers/DetailsReducer';
 const recuders = combineReducers({
 	list: SingleReducer,
-	list1: SingleReducer
+	list1: SingleReducer,
+	ss:DetailsReducer,
 })
+
 const store = createStore(recuders, {});
 
 

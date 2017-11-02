@@ -2,7 +2,11 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import axios from 'axios';
 import "../style/single.scss";
-import { Carousel, WhiteSpace } from 'antd-mobile';
+import { Carousel } from 'antd';
+import 'antd/dist/antd.css';
+import {
+  Link
+} from 'react-router-dom';
 class SingleUI extends Component {
 	componentDidMount() {
 		this.props.getData();
@@ -23,9 +27,9 @@ class SingleUI extends Component {
 		if(this.props.list.list1){
 			items = this.props.list.list1.map((item,index)=>{
 							return <li key={item.id}>
-							<a href="#">
+							<Link to={"/details/"+item.id}>
 							<img src={item.image_240}/>
-							</a>
+							</Link>
 							<div className="content">
 							<p className="one">
 									{item.store_name}{item.msg_name}
@@ -59,11 +63,12 @@ class SingleUI extends Component {
 				<p></p>
 				<div className="right"><i></i><a href="#">我的</a></div>
 			</div>
+			
+			</header>
 			<div className="bottom">
 			<i></i>
 			<input type="text" placeholder="输入商家名字/商品名称获取优惠"/>
 			</div>
-			</header>
 				<div className="swipe">
 					<Carousel
 					      className="my-carousel" autoplay={true} infinite
@@ -133,6 +138,7 @@ const mapDispatchToProps = (dispatch)=>{
 		getData: function(){
 			axios.get("/index.php?act=index&op=index&ajax=1")
 			.then((res)=>{
+				console.log(res)
 				dispatch({
 					type: "SINGLE_GET_DATA",
 					payload:{ 
@@ -140,7 +146,6 @@ const mapDispatchToProps = (dispatch)=>{
 						list1:res.data.data
 					}
 				})
-				console.log(res);
 			})
 		}
 	}

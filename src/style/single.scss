@@ -25,6 +25,9 @@ header{
 	display:flex;
 	width:100%;
 	flex-direction:column;
+	position:fixed;
+	top:0;
+	z-index:5;
 }
 header .top{
 	display:flex;
@@ -71,13 +74,15 @@ header .top .right i{
 	float:left;
 	background-size: px2rem(12px) auto;	
 }
-header .bottom{
+ .bottom{
 	width:100%;
 	height:px2rem(44px);
 	text-align:center;
 	position:relative;
+	background:#fff;
+	margin-top:px2rem(44px);
 }
-header .bottom input{
+ .bottom input{
 	margin-top:px2rem(6px);
 	width:90%;
 	display:inline-block;
@@ -86,7 +91,7 @@ header .bottom input{
 	border:none;
 	border:1px solid #ccc;
 }
-header .bottom i{
+ .bottom i{
 	width:px2rem(20px);
 	height:px2rem(20px);
 	display:block;
@@ -246,7 +251,7 @@ header .bottom i{
 			height:px2rem(31px);
 			border:1px solid #e0e0e0;
 			margin-left:px2rem(10px);
-			font-size:px2rem(16px);
+			font-size:px2rem(14px);
 			float:left;
 			margin-top:px2rem(10px);
 		}
@@ -262,6 +267,8 @@ header .bottom i{
 			color:#303030;
 			margin-top:px2rem(10px);
 			margin-right:px2rem(7px);
+			border-radius:px2rem(5px);
+			border:1px solid #ccc;
 		}
 	}
 	.footer_center{
