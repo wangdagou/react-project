@@ -26,7 +26,7 @@ class FoodUI extends Component {
 				</ul>
 				</div>
 				<ul className="foods">
-					{this.props.list.map((item,index)=>{
+					{this.props.list2.map((item,index)=>{
 						if(index>2){
 						return <li key={item.id}>
 									<span className="image"> 
@@ -89,7 +89,7 @@ class FoodUI extends Component {
 
 const mapStateToProps = (state)=>{
 	return {
-		list: state.list
+		list2: state.list2
 	}
 }
 

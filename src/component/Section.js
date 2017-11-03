@@ -26,7 +26,7 @@ class SectionUI extends Component {
 				</ul>
 				</div>
 				<ul className="foods">
-					{this.props.list2.data.map((item,index)=>{
+					{this.props.list4.data.map((item,index)=>{
 						return <li key={item.id}>
 									<span className="image"> 
 										<img src={item.image_1280}/>
@@ -87,7 +87,7 @@ class SectionUI extends Component {
 
 const mapStateToProps = (state)=>{
 	return {
-		list2: state.list2
+		list4: state.list4
 	}
 }
 

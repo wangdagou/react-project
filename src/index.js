@@ -4,14 +4,19 @@ import App from './router/index';
 import registerServiceWorker from './registerServiceWorker';
 import {createStore, combineReducers} from 'redux';
 import {Provider} from 'react-redux';
+import SingleReducer from './reducers/SingleReducer';
+import DetailsReducer from './reducers/DetailsReducer';
 import FoodReducer from './reducers/FoodReducer';
 import NextReducer from './reducers/NextReducer';
 import SectionReducer from './reducers/SectionReducer';
 
 const recuders = combineReducers({
-	list: FoodReducer,
-	list1:NextReducer,
-	list2:SectionReducer
+	list: SingleReducer,
+	list1: SingleReducer,
+	list2: FoodReducer,
+	list3: NextReducer,
+	list4: SectionReducer,
+	ss:DetailsReducer,
 })
 
 const store = createStore(recuders, {});

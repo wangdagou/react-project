@@ -62,6 +62,7 @@
         "^/index": "/index"
       },
       "ws": true
+<<<<<<< HEAD
     },
     "/list": {
       "target": "http://m.1c10.cn",
@@ -70,6 +71,8 @@
         "^/list": "/list"
       },
       "ws": true
+=======
+>>>>>>> a858d058cf36b72b46f4092da2e50fb12cc8f122
     }
   },
   "jest": {
