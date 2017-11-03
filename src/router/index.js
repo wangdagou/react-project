@@ -18,8 +18,8 @@ const App = () => (
       <Route exact path="/" component={Food}/>
       <Route path="/1" component={Next}/>
       <Route path="/2" component={Section}/>
-      <Route path="/logon" component={Register}/>
-      <Route path="/" component={Logon}/>
+      <Route path="/register" component={Register}/>
+      <Route path="/logon" component={Logon}/>
     </div>
   </Router>
 )
